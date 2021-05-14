@@ -5,4 +5,4 @@ services:
 before_install:
   - docker build -t h0ll0h /docker-react -f Dockerfile.dev . 
 script:
-  - 
+  - docker run -e CI=true h0ll0h/docker-react npm run test
